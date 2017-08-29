@@ -3,7 +3,6 @@ import "mocha";
 import chai from "chai";
 
 const assert = chai.assert;
-//console.log(aritGeo([1,2,3]));
 
 let tola = new Camper("Liadi Omotola", 2, 5);
 let victoria = new Facilitator("Victoria");
