@@ -1,0 +1,33 @@
+{
+  "name": "oop-bootcamp",
+  "version": "1.0.0",
+  "description": "implements oop concepts",
+  "main": "test.js",
+  "dependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register Tests/appTest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liadi/andela-bootcamp-fellows.git"
+  },
+  "keywords": [
+    "javascript",
+    "oop"
+  ],
+  "author": "Liadi Omotola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liadi/andela-bootcamp-fellows/issues"
+  },
+  "homepage": "https://github.com/Liadi/andela-bootcamp-fellows#readme"
+}
