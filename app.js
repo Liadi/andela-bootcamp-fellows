@@ -1,56 +1,58 @@
-class Human {
+export class Human {
     constructor(name){
         this.name = name;
     }
     sayHello(){
-        console.log("Hello, I am " + this.name);
+        return "Hello, I am " + this.name;
     }
+    whatAmI(){
+        return "human";
+    }
+
 }
 
-class LFA extends Human{
+export class LFA extends Human{
     constructor(name, students, groupNumber){
         super(name);
-        this.role = 'Learning Facilitator';
+        this.role = "LFA";
         this.students = students;
         this.groupNumber = groupNumber;
     }
 
     sayHello(){
-        super.sayHello();
-        console.log("and I'm a " + this.role);
+        return super.sayHello() + " and I am an " + this.role;
     
     }
 
     motivateStudents(studentId){
-        console.log(this.students[studentId - 1] + ', Keep up the good work');
+        return this.students[studentId - 1] + ", Keep up the good work";
     }
 
 
     reprove(studentId, feedback){
-        console.log(this.students[studentId - 1] + ', Your passion so far is admirable, but pls work on  ' + feedback);
+        return this.students[studentId - 1] + ", Your passion so far is admirable, but pls work on  " + feedback;
     }
 
 }
 
-class Facilitator extends Human{
+export class Facilitator extends Human{
     constructor(name){
         super(name);
-        this.role = 'Facilitator';
+        this.role = "facilitator";
     }
 
     sayHello(){
-        super.sayHello();
-        console.log("and I'm a " + this.role);
+        return super.sayHello() + " and I am a " + this.role;
     
     }
 
     makeDecision(decision){
-        console.log('By the power vested on me I pronounce this: \n' + decision);
+        return "By the power vested on me I pronounce this: " + decision;
     }
 
 }
 
-class Camper extends Human{
+export class Camper extends Human{
     constructor(name, student_id, groupNumber){
         super(name);
         this.student_id = student_id;
@@ -58,12 +60,10 @@ class Camper extends Human{
     }
      
     sayHello(){
-        super.sayHello();
-        console.log("I'm a camper")
+        return super.sayHello() + " and I am a camper";
     }
 
     myProfile(){
-        console.log("I am presently in cycle 26");
+        return "I am presently in cycle 26";
     }
 }
-export {Camper, Facilitator, LFA, Human};
